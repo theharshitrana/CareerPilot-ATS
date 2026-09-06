@@ -1,0 +1,1 @@
+from app.services.education_matcher import education_matches

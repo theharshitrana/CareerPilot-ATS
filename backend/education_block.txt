@@ -1,0 +1,8 @@
+        # -------------------------------------
+        # Education match
+        # -------------------------------------
+
+        education_matched, education_missing, education_score = education_matches(
+            resume_text,
+            education_list
+        )
