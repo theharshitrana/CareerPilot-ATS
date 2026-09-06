@@ -1,4 +1,4 @@
-# CareerPilot AI
+# 🚀 CareerPilot AI
 
 CareerPilot AI is an AI-powered recruitment and career platform with three connected experiences:
 
@@ -6,7 +6,7 @@ CareerPilot AI is an AI-powered recruitment and career platform with three conne
 2. **Employer / Admin / HR Portal** - create an employer account, publish/manage jobs, receive applications, review resumes, screen candidates with AI, rank candidates, manage interviews, and hire/reject.
 3. **Public Resume Checker** - upload a PDF/DOCX resume without an account and receive ATS score, resume quality, skill matching, missing skills, semantic analysis, and improvement suggestions.
 
-## Product Architecture
+## 🏗️ Product Architecture
 
 ```text
                          CAREERPILOT AI
@@ -31,25 +31,25 @@ CareerPilot AI is an AI-powered recruitment and career platform with three conne
                        Hire/Reject
 ```
 
-## 1. Job Seeker / Employee
+## 👤 1. Job Seeker / Employee
 
 The registered employee can:
 
-- Create an account and log in
-- Upload a resume once
-- Replace/update the resume
-- Automatically extract skills, education, and experience
-- Build a candidate profile from the resume
-- View recommended jobs
-- Browse all active jobs
-- Search and filter jobs
-- View job details
-- Apply to jobs
-- Track application status
-- View interview information
-- Manage settings
+- 📝 Create an account and log in
+- 📄 Upload a resume once
+- 🔄 Replace/update the resume
+- 🧠 Automatically extract skills, education, and experience
+- 👤 Build a candidate profile from the resume
+- 💼 View recommended jobs
+- 🔎 Browse all active jobs
+- 🔍 Search and filter jobs
+- 📋 View job details
+- 📤 Apply to jobs
+- 📊 Track application status
+- 🎤 View interview information
+- ⚙️ Manage settings
 
-### Employee workflow
+### 🔄 Employee Workflow
 
 ```text
 Create Account
@@ -64,7 +64,7 @@ Create Account
  -> Interview
 ```
 
-### Recommended Jobs
+### 💼 Recommended Jobs
 
 Recommendations should consider:
 
@@ -86,7 +86,7 @@ current_time > application_deadline
 
 or when the employer manually closes it.
 
-## 2. Employer / Admin / HR
+## 🏢 2. Employer / Admin / HR
 
 Employer navigation:
 
@@ -101,21 +101,21 @@ Analytics
 Settings
 ```
 
-### Employer Dashboard
+### 📊 Employer Dashboard
 
 Show:
 
 - Active jobs
 - Total applications
 - New applicants
-- Shortlisted candidates
+- ⭐ Shortlisted candidates
 - Interviews
 - Hires
 - Recent applications
 - Recent jobs
 - Hiring pipeline
 
-### Job Management
+### 📝 Job Management
 
 Employers can:
 
@@ -163,7 +163,7 @@ Deadline:
 30 September 2026
 ```
 
-### Applicant Management
+### 👥 Applicant Management
 
 When people apply to a job:
 
@@ -182,18 +182,18 @@ Job
 
 HR can:
 
-- View applicants
-- Open candidate profiles
-- View resumes
-- View ATS analysis
-- View matched skills
-- View missing skills
-- View education
-- View experience
-- Shortlist
-- Reject
-- Move to interview
-- Mark hired
+- 👥 View applicants
+- 👤 Open candidate profiles
+- 📄 View resumes
+- 🤖 View ATS analysis
+- ✅ View matched skills
+- ❌ View missing skills
+- 🎓 View education
+- 💼 View experience
+- ⭐ Shortlist
+- ❌ Reject
+- 🎤 Move to interview
+- 🎉 Mark hired
 
 Application statuses:
 
@@ -207,7 +207,7 @@ Rejected
 Withdrawn
 ```
 
-## 3. AI Resume Screening
+## 🤖 3. AI Resume Screening
 
 For every candidate/job pair, show:
 
@@ -234,11 +234,11 @@ HR should be able to sort candidates by:
 
 AI should assist HR decision-making and should not make irreversible hiring decisions automatically.
 
-## 4. Public Resume Checker
+## 📄 4. Public Resume Checker
 
 A visitor can upload a PDF or DOCX without creating an account.
 
-### Resume Analyzer
+### 🔍 Resume Analyzer
 
 Optional inputs:
 
@@ -265,7 +265,7 @@ Improvement Suggestions
 
 The frontend must use the real backend ATS result. Do not hardcode scores.
 
-### Job Match
+### 🎯 Job Match
 
 A candidate can paste a real job description and compare it against their resume.
 
@@ -282,7 +282,7 @@ Semantic Match
 Suggestions
 ```
 
-## 5. Backend
+## ⚙️ 5. Backend
 
 Backend technology:
 
@@ -323,7 +323,7 @@ backend/
         └── evidence_matcher.py
 ```
 
-### Current API
+### 🔌 Current API
 
 ```text
 GET  /api/health
@@ -347,7 +347,7 @@ Swagger:
 http://127.0.0.1:8000/docs
 ```
 
-### ATS endpoint
+### 📡 ATS Endpoint
 
 ```text
 POST /api/ats/analyze
@@ -366,7 +366,7 @@ experience_min
 experience_max
 ```
 
-### ATS scoring
+### 🧮 ATS Scoring
 
 Current weights:
 
@@ -381,7 +381,7 @@ Skill coverage      15%
 
 The engine performs normalized/exact matching first and uses contextual semantic matching for suitable misses.
 
-## 6. Resume Processing
+## 📑 6. Resume Processing
 
 Supported:
 
@@ -413,7 +413,7 @@ ML -> Machine Learning
 AI -> Artificial Intelligence
 ```
 
-## 7. Semantic Matching
+## 🧠 7. Semantic Matching
 
 The project uses:
 
@@ -430,7 +430,7 @@ Semantic matching can help with:
 
 Semantic similarity must be supported by resume evidence when deciding whether a candidate actually has a skill.
 
-## 8. Frontend
+## 💻 8. Frontend
 
 Technology:
 
@@ -487,7 +487,7 @@ fetch(`${API}/api/ats/analyze`, {
 
 Do not manually set `Content-Type` when sending `FormData`.
 
-## 9. Database Plan
+## 🗄️ 9. Database Plan
 
 Production should use a persistent database.
 
@@ -506,7 +506,7 @@ Notification
 ATSAnalysis
 ```
 
-### User
+### 👤 User
 
 ```text
 id
@@ -526,7 +526,7 @@ employer
 admin
 ```
 
-### Job
+### 💼 Job
 
 ```text
 id
@@ -548,7 +548,7 @@ created_at
 updated_at
 ```
 
-### Resume
+### 📄 Resume
 
 ```text
 id
@@ -563,7 +563,7 @@ created_at
 updated_at
 ```
 
-### Application
+### 📋 Application
 
 ```text
 id
@@ -577,7 +577,7 @@ applied_at
 updated_at
 ```
 
-## 10. Job Deadline Logic
+## ⏰ 10. Job Deadline Logic
 
 Jobs have:
 
@@ -595,7 +595,7 @@ Only ACTIVE jobs should appear in:
 
 A job becomes EXPIRED after its deadline. Employers can manually close an ACTIVE job earlier.
 
-## 11. Candidate Recommendation Logic
+## 🎯 11. Candidate Recommendation Logic
 
 Example:
 
@@ -618,7 +618,7 @@ Semantic Relevance
 
 Expired jobs must be filtered out before ranking/displaying recommendations.
 
-## 12. Employer Candidate Ranking
+## 🏆 12. Employer Candidate Ranking
 
 ```text
 Application
@@ -655,7 +655,7 @@ Example:
 5. Candidate E  62
 ```
 
-## 13. Interviews
+## 🎤 13. Interviews
 
 Existing APIs:
 
@@ -666,16 +666,16 @@ POST /api/interview/evaluate
 
 Future interview features:
 
-- Technical questions
-- HR questions
-- Difficulty levels
-- Job-specific questions
-- Candidate-specific questions
-- Interview score
-- Feedback
-- Interview history
+- 💻 Technical questions
+- 👔 HR questions
+- 📊 Difficulty levels
+- 🎯 Job-specific questions
+- 👤 Candidate-specific questions
+- 🏆 Interview score
+- 💬 Feedback
+- 🕒 Interview history
 
-## 14. Analytics
+## 📈 14. Analytics
 
 Employer analytics can show:
 
@@ -693,13 +693,13 @@ Time to Hire
 
 Possible charts:
 
-- Applications over time
-- Hiring funnel
-- Job performance
-- Candidate pipeline
-- Skill demand
+- 📈 Applications over time
+- 🔽 Hiring funnel
+- 💼 Job performance
+- 👥 Candidate pipeline
+- 🧠 Skill demand
 
-## 15. Notifications
+## 🔔 15. Notifications
 
 Candidate notifications:
 
@@ -720,20 +720,20 @@ Interview response
 Job deadline approaching
 ```
 
-## 16. Security
+## 🔐 16. Security
 
 Production requirements:
 
-- Password hashing
-- JWT/session authentication
-- Role-based authorization
-- Input validation
-- File type validation
-- File size limits
-- Secure resume storage
-- Protected employer APIs
-- Protected candidate APIs
-- Environment variables for secrets
+- 🔒 Password hashing
+- 🔑 JWT/session authentication
+- 🛡️ Role-based authorization
+- ✅ Input validation
+- 📄 File type validation
+- 📦 File size limits
+- 🔐 Secure resume storage
+- 🏢 Protected employer APIs
+- 👤 Protected candidate APIs
+- 🔑 Environment variables for secrets
 
 Never commit:
 
@@ -747,26 +747,421 @@ database credentials
 private certificates
 ```
 
-## 17. Development Roadmap
+## 📌 Project Status
 
+This README documents the **complete CareerPilot AI product across all 12 development phases**.  
+The roadmap below represents the full implementation scope and final product architecture.
+
+🟢 **DONE** — currently implemented and tested  
+🟡 **IN PROGRESS** — currently being implemented  
+⚪ **PLANNED** — part of the complete product roadmap
+
+## 🗺️ 17. Complete Development Roadmap
+
+### 🟢 Phase 1 — ATS Resume Checker
+
+The public resume-analysis experience.
+
+**Features:**
+- 📄 PDF/DOCX resume upload
+- 🎯 Target role
+- 🧠 Focus skills
+- 🤖 ATS scoring
+- 📊 Resume quality scoring
+- ✅ Matched skills
+- ❌ Missing skills
+- 🎓 Education matching
+- 💼 Experience matching
+- 🧠 Semantic analysis
+- 💡 Improvement suggestions
+- 🎯 Job description matching
+
+**Status:** 🟢 DONE
+
+---
+
+### 🟡 Phase 2 — Job Seeker Account + Profile
+
+Create the registered employee/job-seeker experience.
+
+**Features:**
+- 📝 Registration
+- 🔐 Login
+- 👤 Candidate profile
+- 📧 Account information
+- ⚙️ Profile settings
+- 📄 Resume association
+- 🧭 Job seeker dashboard
+
+**Status:** 🟡 IN PROGRESS
+
+---
+
+### ⚪ Phase 3 — Resume Upload + Profile Extraction
+
+Connect the job seeker's resume to their profile.
+
+**Features:**
+- 📄 Upload PDF/DOCX
+- 🔄 Replace resume
+- 📝 Parse resume
+- 🧠 Extract skills
+- 🎓 Extract education
+- 💼 Extract experience
+- 📊 Extract resume metadata
+- 👤 Populate candidate profile automatically
+
+**Status:** ⚪ PLANNED
+
+---
+
+### ⚪ Phase 4 — Employer Account + Dashboard
+
+Create the employer/HR recruitment workspace.
+
+**Features:**
+- 🏢 Employer registration
+- 🔐 Employer login
+- 📊 Employer dashboard
+- 💼 Active jobs
+- 📩 Total applications
+- 🆕 New applicants
+- ⭐ Shortlisted candidates
+- 🎤 Interviews
+- 🎉 Hires
+- 📈 Hiring pipeline
+- ⚙️ Employer settings
+
+**Status:** ⚪ PLANNED
+
+---
+
+### ⚪ Phase 5 — Employer Job Creation
+
+Allow employers to create and manage recruitment jobs.
+
+**Features:**
+- ➕ Create job
+- ✏️ Edit job
+- 📢 Publish job
+- 🔒 Close job
+- 🗄️ Archive/delete job
+- ⏰ Application deadline
+- 🛠️ Required skills
+- ⭐ Preferred skills
+- 🎓 Education requirements
+- 💼 Experience range
+- 📍 Location
+- 🏷️ Employment type
+- 💰 Salary range
+- 📝 Job description
+
+**Status:** ⚪ PLANNED
+
+---
+
+### ⚪ Phase 6 — Active Job Listing + Deadline Logic
+
+Ensure candidates only see valid opportunities.
+
+**Features:**
+- 🟢 ACTIVE jobs
+- 🔴 CLOSED jobs
+- ⏰ EXPIRED jobs
+- 🔍 Job search
+- 🎛️ Job filters
+- 📅 Deadline validation
+- 🚫 Hide expired jobs
+- 🚫 Hide manually closed jobs
+
+Only ACTIVE jobs should appear in:
+- 💼 Recommended Jobs
+- 🔎 All Jobs
+- 🔍 Search Results
+
+**Status:** ⚪ PLANNED
+
+---
+
+### ⚪ Phase 7 — Job Recommendations
+
+Match job seekers with relevant active jobs.
+
+**Ranking factors:**
+- 🛠️ Skill match
+- 🎯 Job-title relevance
+- 🎓 Education match
+- 💼 Experience match
+- 🧠 Semantic relevance
+
+**Example:**
 ```text
-Phase 1  Existing ATS Resume Checker             DONE
-Phase 2  Job Seeker Account + Profile
-Phase 3  Resume Upload + Profile Extraction
-Phase 4  Employer Account + Dashboard
-Phase 5  Employer Job Creation
-Phase 6  Active Job Listing + Deadline Logic
-Phase 7  Job Recommendations
-Phase 8  Candidate Applications
-Phase 9  Employer Applicant Management
-Phase 10 AI Candidate Screening + Ranking
-Phase 11 Interviews
-Phase 12 Analytics + Notifications
+Python Developer        92%
+Data Analyst            84%
+ML Engineer             79%
+Cybersecurity Engineer  31%
 ```
 
-## 18. Run Locally
+Expired and closed jobs are filtered before ranking.
 
-### Backend
+**Status:** ⚪ PLANNED
+
+---
+
+### ⚪ Phase 8 — Candidate Applications
+
+Complete the employee application workflow.
+
+**Features:**
+- 👀 View job details
+- 📄 Select resume
+- 📤 Apply
+- 🚫 Prevent invalid/expired applications
+- 📋 Application history
+- 📊 Application status
+- 🔄 Track status changes
+- 🎤 View interview information
+
+**Application statuses:**
+```text
+Applied
+Under Review
+Shortlisted
+Interview
+Selected
+Rejected
+Withdrawn
+```
+
+**Status:** ⚪ PLANNED
+
+---
+
+### ⚪ Phase 9 — Employer Applicant Management
+
+Give HR a complete candidate-management workspace.
+
+**Features:**
+- 👥 View applicants
+- 👤 Open candidate profile
+- 📄 View resume
+- 📊 View ATS analysis
+- ✅ View matched skills
+- ❌ View missing skills
+- 🎓 View education
+- 💼 View experience
+- ⭐ Shortlist
+- ❌ Reject
+- 🎤 Move to interview
+- 🎉 Mark hired
+- 🔍 Search/filter applicants
+- ↕️ Sort candidates
+
+**Sorting options:**
+- ATS score
+- Match score
+- Experience
+- Application date
+- Status
+
+**Status:** ⚪ PLANNED
+
+---
+
+### ⚪ Phase 10 — AI Candidate Screening + Ranking
+
+Automatically assist HR with candidate evaluation.
+
+**Pipeline:**
+```text
+📋 Application
+      ↓
+📄 Resume Parsing
+      ↓
+🤖 ATS Analysis
+      ↓
+🎯 Candidate/Job Match
+      ↓
+🏆 Candidate Ranking
+      ↓
+⭐ HR Shortlist
+```
+
+**Candidate comparison includes:**
+- ATS score
+- Skill match
+- Required skills
+- Preferred skills
+- Education match
+- Experience match
+- Resume quality
+- Matched skills
+- Missing skills
+- Recommendation
+
+**Important:** AI assists HR decision-making and does not automatically make irreversible hiring decisions.
+
+**Status:** ⚪ PLANNED
+
+---
+
+### ⚪ Phase 11 — Interviews
+
+Connect shortlisted candidates to the interview workflow.
+
+**Features:**
+- 🎤 Start interview
+- 💻 Technical questions
+- 👔 HR questions
+- 🎯 Job-specific questions
+- 👤 Candidate-specific questions
+- 📊 Difficulty levels
+- 🏆 Interview score
+- 💬 Feedback
+- 🕒 Interview history
+- 📅 Interview information
+
+**Existing APIs:**
+```text
+POST /api/interview/start
+POST /api/interview/evaluate
+```
+
+**Status:** ⚪ PLANNED / API FOUNDATION AVAILABLE
+
+---
+
+### ⚪ Phase 12 — Analytics + Notifications
+
+Complete the recruitment intelligence layer.
+
+#### 📈 Employer Analytics
+
+Show:
+- 💼 Jobs Posted
+- 📩 Applications
+- 👥 Applicants Per Job
+- 📊 Average ATS Score
+- ⭐ Shortlist Rate
+- 🎤 Interview Rate
+- 🎉 Hiring Rate
+- ❌ Rejected Candidates
+- ⏱️ Time to Hire
+
+**Charts:**
+- 📈 Applications over time
+- 🔽 Hiring funnel
+- 💼 Job performance
+- 👥 Candidate pipeline
+- 🧠 Skill demand
+
+#### 🔔 Candidate Notifications
+
+- 📩 Application received
+- ⭐ Application shortlisted
+- 📅 Interview scheduled
+- ❌ Application rejected
+- 💼 New recommended job
+
+#### 🔔 Employer Notifications
+
+- 📩 New application
+- 👤 New candidate
+- 🎤 Interview response
+- ⏰ Job deadline approaching
+
+**Status:** ⚪ PLANNED
+
+---
+
+## 🏁 Complete Product Lifecycle
+
+When all phases are implemented, CareerPilot AI will provide the complete recruitment loop:
+
+```text
+🚀 CAREERPILOT AI
+
+👤 JOB SEEKER
+    ↓
+📝 Create Account
+    ↓
+📄 Upload Resume
+    ↓
+🧠 Extract Skills / Education / Experience
+    ↓
+👤 Build Profile
+    ↓
+💼 Active Job Recommendations
+    ↓
+🔎 Browse / Search Jobs
+    ↓
+📋 Apply
+    ↓
+📊 Track Application
+    ↓
+🎤 Interview
+    ↓
+🎉 Selected / ❌ Rejected
+
+
+🏢 EMPLOYER / HR
+    ↓
+📝 Create Account
+    ↓
+💼 Create Job
+    ↓
+📢 Publish Job
+    ↓
+📩 Receive Applications
+    ↓
+📄 Review Resumes
+    ↓
+🤖 AI Screening
+    ↓
+🏆 Candidate Ranking
+    ↓
+⭐ Shortlist
+    ↓
+🎤 Interview
+    ↓
+🎉 Hire / ❌ Reject
+
+
+📄 PUBLIC RESUME CHECKER
+    ↓
+📤 Upload Resume
+    ↓
+🤖 ATS Analysis
+    ↓
+📊 Score + Skill Analysis
+    ↓
+🎯 Job Match
+    ↓
+💡 Improvement Suggestions
+```
+
+## ✅ Final Phase Checklist
+
+| Phase | Feature | Status |
+|---|---|---|
+| 1️⃣ | ATS Resume Checker | 🟢 DONE |
+| 2️⃣ | Job Seeker Account + Profile | 🟡 IN PROGRESS |
+| 3️⃣ | Resume Upload + Extraction | ⚪ PLANNED |
+| 4️⃣ | Employer Account + Dashboard | ⚪ PLANNED |
+| 5️⃣ | Employer Job Creation | ⚪ PLANNED |
+| 6️⃣ | Active Jobs + Deadline Logic | ⚪ PLANNED |
+| 7️⃣ | Job Recommendations | ⚪ PLANNED |
+| 8️⃣ | Candidate Applications | ⚪ PLANNED |
+| 9️⃣ | Applicant Management | ⚪ PLANNED |
+| 🔟 | AI Screening + Ranking | ⚪ PLANNED |
+| 1️⃣1️⃣ | Interviews | ⚪ PLANNED |
+| 1️⃣2️⃣ | Analytics + Notifications | ⚪ PLANNED |
+
+> 🎯 **Goal:** Complete all 12 phases to turn CareerPilot AI into a full end-to-end AI recruitment and career platform.
+
+## ▶️ 18. Run Locally
+
+### ⚙️ Backend
 
 ```powershell
 cd C:\Users\jaima\Downloads\CareerPilot-AI\backend
@@ -774,26 +1169,26 @@ cd C:\Users\jaima\Downloads\CareerPilot-AI\backend
 uvicorn app.main:app --reload
 ```
 
-### Frontend
+### 💻 Frontend
 
 ```powershell
 cd C:\Users\jaima\Downloads\CareerPilot-AI\frontend\frontend
 npm run dev
 ```
 
-### Production build test
+### 🏭 Production Build Test
 
 ```powershell
 npm run build
 ```
 
-### Preview
+### 👀 Preview
 
 ```powershell
 npm run preview
 ```
 
-## 19. Final Goal
+## 🎯 19. Final Goal
 
 CareerPilot AI should provide the complete recruitment loop:
 
